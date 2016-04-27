@@ -1,11 +1,11 @@
-function changeColor() {
-  var listers = document.getElementsByClassName("list-item");
-    listers.setAttribute("purple");
-    listers.remove("onclick");
+
+
+function changeColor(element) {
+  element.classList.add("purple");
+  element.setAttribute("onClick", "backToBlack(this);");
 }
 
-function backToBlack() {
- var listers = document.getElementsByClassName("list-item");
-   listers.remove("purple");
-   listers.setAttribute("onclick");
+function backToBlack(element) {
+  element.classList.remove("purple");
+  element.setAttribute("onClick", "changeColor(this);");
 }
